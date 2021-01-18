@@ -33,7 +33,8 @@ Pour cette méthode, on choisit une valeur qui va être le "pivot". Ensuite, les
 
 ## Tri shell (shell_sort)
 
-
+Cette méthode trie d'abord les éléments éloignés les uns des autres et réduit successivement l'intervalle entre les éléments à trier. C'est une version généralisée du tri par insertion.
 
 ## Tri peigne (comb_sort)
 
+Cette méthode ressemble au tri à bulle, mais au lieu de comparer des éléments adjacents, on compare des éléments avec un écart entre eux.
