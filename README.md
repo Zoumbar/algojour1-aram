@@ -24,11 +24,12 @@ On suppose que le 1er élément est trié et on passe à l'élément suivant. Si
 
 ## Tri fusion (merge_sort)
 
-
+On divise la liste en 2 listes, puis on continue de diviser chaque liste en 2 jusqu'à ce que chaque liste soient composé d'un seul élément.  
+On tri alors chaque liste en comparant les plus petites valeurs, avant de les fusionner ensemble et finalement obtenir la liste triée.
 
 ## Tri rapide (quick_sort)
 
-
+Pour cette méthode, on choisit une valeur qui va être le "pivot". Ensuite, les valeurs plus petites que le pivot sont déplacées vers la gauche et les valeurs plus grandes sont déplacées vers la droite.
 
 ## Tri shell (shell_sort)
 

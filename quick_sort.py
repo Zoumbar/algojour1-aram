@@ -1,7 +1,6 @@
 import sys
 import time
 
-
 arr = sys.argv[1].split(';')
 liste = []
 
