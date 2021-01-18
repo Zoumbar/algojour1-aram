@@ -7,6 +7,7 @@ while x < len(arr):
     liste.append(float(arr[x]))
     x = x + 1
 
+
 def bubble_sort(liste):
     n = 0
     for i in range(len(liste)):
