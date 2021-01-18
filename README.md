@@ -20,3 +20,7 @@ Maintenant que le 1er élément est trié, on parcourt le reste de la liste à l
 
 ## Tri par insertion (insertion_sort)
 
+On suppose que le 1er élément est trié et on passe à l'élément suivant. Si celui-ci est plus grand que le 1er, on le laisse tel quel, mais s'il est plus petit, on copie la valeur du 1er élément dans la 2ème position et on défini le 1er élément par la valeur du 2ème.
+
+## Tri fusion (merge_sort)
+
