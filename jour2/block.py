@@ -18,8 +18,8 @@ class Block:
     def check(self):
          while self.hash[0:2] != "00":
             self.nonce += 1
-            newHash = calculateHash(self)
-            self.hash = newHash
+            self.hash = calculateHash(self)
+            
 
 
 first = Block(0, "none", "First Block", datetime.now(), "", 0)
