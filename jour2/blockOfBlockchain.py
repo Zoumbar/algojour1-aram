@@ -1,9 +1,8 @@
 class Block: 
-    def __init__(self, identifier, previousHash, hashOfBody, bockHash, timestamp, nonce):
-        self.identifier = identifier
+    def __init__(self, index, previousHash, data, timestamp, blockHash, nonce):
+        self.index = index
         self.previousHash = previousHash
-        self.hashOfBody = hashOfBody
-        self bockHash = bockHash
+        self.data = data
         self.timestamp = timestamp
+        self.blockHash = blockHash
         self.nonce = nonce
-
