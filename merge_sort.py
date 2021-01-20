@@ -9,40 +9,46 @@ while x < len(arr):
     liste.append(float(arr[x]))
     x = x + 1
     
-def merge_sort(liste):
-    if len(liste) <= 1:
-        return liste
-    middle = len(liste) // 2
-    left_list = liste[:middle]
-    right_list = liste[middle:]
-
-    left_list = merge_sort(left_list)
-    right_list = merge_sort(right_list)
-    return list(merge(left_list, right_list))
-
-
-def merge(left_half,right_half):
-
-    res = []
-    while len(left_half) != 0 and len(right_half) != 0:
-        if left_half[0] < right_half[0]:
-            res.append(left_half[0])
-            left_half.remove(left_half[0])
-        else:
-            res.append(right_half[0])
-            right_half.remove(right_half[0])
-    if len(left_half) == 0:
-        res = res + right_half
-    else:
-        res = res + left_half
-    return res
+def mergeSort(liste):
+    if len(liste) > 1:
+        mid = len(liste)//2
+        L = liste[:mid]
+        R = liste[mid:]
+        mergeSort(L)
+        mergeSort(R)
+ 
+        i = j = k = 0
+ 
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                liste[k] = L[i]
+                i += 1
+            else:
+                liste[k] = R[j]
+                j += 1
+            k += 1
+ 
+        while i < len(L):
+            liste[k] = L[i]
+            i += 1
+            k += 1
+ 
+        while j < len(R):
+            liste[k] = R[j]
+            j += 1
+            k += 1
+ 
+def printList(liste):
+    for i in range(len(liste)):
+        print(liste[i], end=" ")
+    print()
 
 
 print("Série : ", liste)
 
 start_time = time.time()
 
-merge_sort(liste)
+mergeSort(liste)
 
 print("Résultat : ", liste)
 
