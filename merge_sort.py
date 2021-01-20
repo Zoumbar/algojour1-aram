@@ -37,11 +37,6 @@ def mergeSort(liste):
             liste[k] = R[j]
             j += 1
             k += 1
- 
-def printList(liste):
-    for i in range(len(liste)):
-        print(liste[i], end=" ")
-    print()
 
 
 print("Série : ", liste)
