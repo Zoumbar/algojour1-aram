@@ -10,6 +10,7 @@ while x < len(arr):
     x = x + 1
 
 def insertion_sort(liste):
+    n = 0
     for k in range(1,len(liste)):
         temp=liste[k]
         j=k
@@ -17,6 +18,8 @@ def insertion_sort(liste):
             liste[j]=liste[j-1]
             j-=1
             liste[j]=temp
+        n += 1
+    print("Nb d'itération :", n)
     return liste
 
 print("Série : ", liste)
