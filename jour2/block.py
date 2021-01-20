@@ -23,7 +23,7 @@ class Block:
         self.hash = calculateHash(self)
 
     def check(self):
-        while self.hash[0:2] != "00":
+        while self.hash[0:3] != "000":
             self.nonce = self.nonce + 1
             newHash = calculateHash(self)
             self.hash = newHash
@@ -32,21 +32,19 @@ class Block:
 class Blockchain:
     def __init__(self):
         self.blocks = []
-
         firstBlock = Block(0, "none", "First Block", datetime.now(), "", 0)
         firstBlock.check()
         self.blocks.append(firstBlock)
 
-
-    def AddBlock(self, blockToAdd):
+    def AddBlock(self, nbBlock):
         x = 0
-        while x < blockToAdd:
+        while x < nbBlock:
             Index = self.blocks[x].index + 1
             PreviousHash = self.blocks[x].hash
-            NewBlock = Block(Index, PreviousHash, "Block", datetime.now(), "", 0  )
+            NewBlock = Block(Index, PreviousHash, "Données du block", datetime.now(), "", 0)
             NewBlock.check()
             self.blocks.append(NewBlock)
-            x = x + 1
+            x += 1
 
 
 blockchain = Blockchain()
