@@ -1,6 +1,7 @@
 import sys
 import time
 
+
 arr = sys.argv[1].split(';')
 liste = []
 
@@ -9,19 +10,20 @@ while x < len(arr):
     liste.append(float(arr[x]))
     x = x + 1
 
-
 def comb_sort(liste):
-    gap = len(liste)
-    swaps = True
-    while gap > 1 or swaps:
-        gap = max(1, int(gap / 1.25))
-        swaps = False
-        for i in range(len(liste) - gap):
-            j = i+gap
-            if liste[i] > liste[j]:
-                liste[i], liste[j] = liste[j], liste[i]
-                swaps = True
- 
+    n = 0
+    total = len(liste)
+    change = True
+    while total > 1 or change:
+        total = max(1, int(total / 1.25))
+        change = False
+        for a in range(len(liste) - total):
+            b = a+total
+            if liste[a] > liste[b]:
+                liste[a], liste[b] = liste[b], liste[a]
+                change = True
+        n += 1
+    print("Nb d'itération :", n)
 
 print("Série : ", liste)
 
