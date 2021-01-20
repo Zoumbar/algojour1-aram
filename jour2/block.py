@@ -53,10 +53,10 @@ blockchain.AddBlock(2)
 for block in blockchain.blocks:
     print (
     str("Block index : " + str(block.index) + 
-    "\nPrevious hash : " + str(block.previousHash) +
-    "\nTimestamp : " + str(block.timestamp) +
-    "\nData : " + str(block.data) +
-    "\nHash : " + str(block.hash) +
-    "\nNonce : " + str(block.nonce) +
+    "\n    Previous hash : " + str(block.previousHash) +
+    "\n    Timestamp : " + str(block.timestamp) +
+    "\n    Data : " + str(block.data) +
+    "\n    Hash : " + str(block.hash) +
+    "\n    Nonce : " + str(block.nonce) +
     "\n"
     ))
