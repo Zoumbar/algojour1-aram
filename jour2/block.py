@@ -29,13 +29,16 @@ class Blockchain:
         first.check()
         self.blockchain.append(first)
 
+    def newBlock(self, data):
+        previous = self.blockchain[-1]
+        return(Block(previous.index + 1, previous.hash, data, datetime.now(), hash, nonce))
 
 
-print(first.hash)
-print("nonce: ", first.nonce)
 
 
-#if str[0,3] == "000"
+#print(first.hash)
+#print("nonce: ", first.nonce)
+
 
 #bchain = Blockchain(3)
 #
