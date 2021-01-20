@@ -12,7 +12,7 @@ class Block:
         self.previousHash = previousHash
         self.data = data
         self.timestamp = timestamp
-        self.nonce = nonce
+        self.nonce = 0
         self.hash = calculateHash(self)
 
     def check(self):
@@ -21,9 +21,16 @@ class Block:
             self.hash = calculateHash(self)
             
 
+class Blockchain:
 
-first = Block(0, "none", "First Block", datetime.now(), "", 0)
-first.check()
+    def __init__(self):
+        self.blockchain = []
+        first = Block(0, "none", "First Block", datetime.now(), "", 0)
+        first.check()
+        self.blockchain.append(first)
+
+
+
 print(first.hash)
 print("nonce: ", first.nonce)
 
