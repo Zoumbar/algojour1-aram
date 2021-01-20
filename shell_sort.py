@@ -26,9 +26,9 @@ def shell_sort(liste, n):
 
 size = len(liste)
 
-start_time = time.time()
-
 print("Série : ", liste)
+
+start_time = time.time()
 
 shell_sort(liste, size)
 

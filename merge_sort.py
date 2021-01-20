@@ -9,7 +9,6 @@ while x < len(arr):
     liste.append(float(arr[x]))
     x = x + 1
     
-
 def merge_sort(liste):
     if len(liste) <= 1:
         return liste
