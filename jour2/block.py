@@ -48,7 +48,19 @@ class Blockchain:
 
 
 blockchain = Blockchain()
-blockchain.AddBlock(2)
+blockchain.AddBlock(3)
+
+validation = True
+y = 1
+while y <= 3:
+    if blockchain.blocks[y].index != blockchain.blocks[y-1].index + 1:
+        validation = False
+    if blockchain.blocks[y].previousHash != blockchain.blocks[y-1].hash:
+        validation = False
+    y += 1
+
+print("Validation : " + str(validation) + "\n")
+
 
 for block in blockchain.blocks:
     print (
